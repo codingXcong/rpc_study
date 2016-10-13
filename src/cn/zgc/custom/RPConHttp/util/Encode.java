@@ -1,7 +1,8 @@
 package cn.zgc.custom.RPConHttp.util;
 
 public enum Encode {
-	UTF8((byte)1);
+	UTF8((byte)1),
+	GBK((byte)2);
 	
 	byte val;
 	

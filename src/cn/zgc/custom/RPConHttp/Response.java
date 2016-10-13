@@ -6,14 +6,14 @@ public class Response {
 	 * 响应 文本
 	 */
 	private String response;
-	private String responseLength;
+	private int responseLength;
 	public byte getEncode() {
 		return encode;
 	}
 	public String getResponse() {
 		return response;
 	}
-	public String getResponseLength() {
+	public int getResponseLength() {
 		return responseLength;
 	}
 	public void setEncode(byte encode) {
@@ -22,7 +22,7 @@ public class Response {
 	public void setResponse(String response) {
 		this.response = response;
 	}
-	public void setResponseLength(String responseLength) {
+	public void setResponseLength(int responseLength) {
 		this.responseLength = responseLength;
 	}
 	

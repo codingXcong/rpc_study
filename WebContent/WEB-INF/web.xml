@@ -9,7 +9,7 @@
        
        <!-- 配置接口的具体实现类 -->
        <init-param>
-           <param-name>service-class</param-name>
+           <param-name>service-class</param-name> 
            <param-value>cn.zgc.hessian.service.ServiceImpl</param-value>
        </init-param>
    </servlet>
