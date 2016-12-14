@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 /**
@@ -25,15 +24,15 @@ public class EchoClient {
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			PrintWriter pw = new PrintWriter(new OutputStreamWriter(out),true);
+			PrintWriter pw = new PrintWriter(out,true);
 			BufferedReader localBr = new BufferedReader(new InputStreamReader(System.in));
 			String line = null;
 			while((line=localBr.readLine())!=null){
-				pw.write("abcdef");
-				pw.flush();
+				pw.println(line);
 				System.out.println("已发送："+line);
 				String resp = br.readLine();
 				System.out.println(resp);
+				System.out.println("--------------------");
 				if(line.equals("bye"))
 					break;
 			}
